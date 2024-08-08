@@ -151,3 +151,68 @@ class LinkedList:
             current = current.next
         logger.info(f"Linked list size is {size}.")
         return size
+    
+    def reverse_ll_iterative(self) -> None:
+        previous = None
+        current = self.head
+        while current is not None:
+            next_node = current.next
+            current.next = previous
+            previous = current
+            current = next_node
+        self.head = previous
+        logger.info("Reversed the linked list iteratively.")
+
+    def has_cycle(self) -> bool:
+        current_tortoise = self.head
+        current_hare = self.head
+
+        while current_hare and current_hare.next:
+            current_tortoise = current_tortoise.next
+            current_hare = current_hare.next.next
+
+            if current_tortoise == current_hare:
+                logger.info("Cycle detected in the linked list.")
+                return True
+
+        logger.info("No cycle detected in the linked list.")
+        return False
+
+    def reverse_ll_recursive_helper_function(self) -> None:
+        def _reverse_recursive(current, previous):
+            if current is None:
+                return previous
+            next_node = current.next
+            current.next = previous
+            return _reverse_recursive(next_node, current)
+
+        self.head = _reverse_recursive(self.head, None)
+        logger.info("Reversed the linked list recursively. (Used the helper function so the interface is much cleaner.)")
+
+    def reverse_ll_recursive(self, current=None, previous=None) -> None:
+        if current is None:
+            current = self.head
+        
+        if current is None:  
+            self.head = previous
+            return
+        
+        if current.next is None:
+            self.head = current
+            current.next = previous
+            logger.info("Reversed the linked list recursively.")
+            return
+        
+        next_node = current.next
+        current.next = previous
+        self.reverse_ll_recursive(next_node, current)
+
+
+ll = LinkedList()
+ll.insert_at_end(1)
+ll.insert_at_end(2)
+ll.insert_at_end(3)
+ll.traverse_ll()  
+
+ll.reverse_ll_recursive()
+ll.traverse_ll() 
