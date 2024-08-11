@@ -24,26 +24,32 @@
 from loguru import logger
 from typing import List, Tuple
 
+
 def binarySearch(numbers: List[int], target: int) -> int:
     left, right = 0, len(numbers) - 1
-    
+
     while left <= right:
         mid = left + (right - left) // 2
-        logger.info(f"Left: {left}, Right: {right}, Mid: {mid}, numbers[Mid]: {numbers[mid]}")
-        
+        logger.info(
+            f"Left: {left}, Right: {right}, Mid: {mid}, numbers[Mid]: {numbers[mid]}"
+        )
+
         if numbers[mid] == target:
             return mid
         elif numbers[mid] < target:
             left = mid + 1
         else:
             right = mid - 1
-    
+
     return -1
+
 
 def user_input() -> Tuple[List[int], int]:
     while True:
         ui_arr = input("Please enter the space-separated integer array: \n")
-        target = input("Please enter the value that you want to search in the array: \n")
+        target = input(
+            "Please enter the value that you want to search in the array: \n"
+        )
         try:
             ui = list(map(int, ui_arr.split()))
             logger.info(f"Here is the array that we are referencing: {ui}")
@@ -51,8 +57,11 @@ def user_input() -> Tuple[List[int], int]:
             logger.info(f"Here is the number that we are searching for: {target}")
             return ui, target
         except Exception as e:
-            logger.debug(f"Could not parse the input properly. Ran into problem: \n {e}")
-            
+            logger.debug(
+                f"Could not parse the input properly. Ran into problem: \n {e}"
+            )
+
+
 def main():
     logger.info("Starting the Application.")
     ui, target = user_input()
@@ -61,6 +70,7 @@ def main():
         logger.info(f"Index of the number that you are looking for is: {index}")
     else:
         logger.info("The number is not in the array.")
+
 
 if __name__ == "__main__":
     main()

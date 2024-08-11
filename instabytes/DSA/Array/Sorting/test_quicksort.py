@@ -1,4 +1,5 @@
-from QuickSort import quicksort  
+from QuickSort import quicksort
+
 
 def test_quicksort():
     assert quicksort([3, 6, 8, 10, 1, 2, 1]) == [1, 1, 2, 3, 6, 8, 10]

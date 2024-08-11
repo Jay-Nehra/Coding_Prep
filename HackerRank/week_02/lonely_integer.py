@@ -13,6 +13,7 @@ import sys
 # The function accepts INTEGER_ARRAY a as parameter.
 #
 
+
 def lonelyinteger(a):
     # Write your code here
     ele_freq = {}
@@ -21,7 +22,7 @@ def lonelyinteger(a):
             ele_freq[ele] += 1
         else:
             ele_freq[ele] = 1
-    
+
     value_to_find = 1
     key_with_value = None
     for key, value in ele_freq.items():
@@ -29,11 +30,9 @@ def lonelyinteger(a):
             key_with_value = key
             return key_with_value
 
-            
-            
 
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+if __name__ == "__main__":
+    fptr = open(os.environ["OUTPUT_PATH"], "w")
 
     n = int(input().strip())
 
@@ -41,6 +40,6 @@ if __name__ == '__main__':
 
     result = lonelyinteger(a)
 
-    fptr.write(str(result) + '\n')
+    fptr.write(str(result) + "\n")
 
     fptr.close()

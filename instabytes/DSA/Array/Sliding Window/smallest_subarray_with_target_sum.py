@@ -16,25 +16,30 @@
         - Result:
             - If a valid subarray is found, return the minimum length. Otherwise, return -1 if no such subarray exists.
 """
+
 from math import inf
-from loguru import logger 
+from loguru import logger
 from typing import List, Tuple
+
 
 def min_length_subarray(numbers: List[int], target: int) -> int:
     current_sum, left, right = 0, 0, 0
     min_length = inf
-    
+
     for right in range(len(numbers)):
         current_sum += numbers[right]
         logger.info(f"This is the current sum:  {current_sum}")
         while current_sum >= target:
-            min_length = min(min_length, right-left+1)
+            min_length = min(min_length, right - left + 1)
             logger.info(f"Current minimum length is: {min_length}")
             current_sum -= numbers[left]
-            logger.info(f"Contracting the window from the start. Previous left index is at:  {left}")
+            logger.info(
+                f"Contracting the window from the start. Previous left index is at:  {left}"
+            )
             left += 1
-            
+
     return -1 if min_length == inf else min_length
+
 
 def user_input() -> Tuple[List[int], int]:
     while True:
@@ -45,12 +50,18 @@ def user_input() -> Tuple[List[int], int]:
             target_sum = int(target_sum.strip())
             return ui, target_sum
         except ValueError as e:
-            logger.error(f"Could not parse the input. Please enter valid integers. Error: {e}")
-            
+            logger.error(
+                f"Could not parse the input. Please enter valid integers. Error: {e}"
+            )
+
+
 def main():
     numbers, target = user_input()
     min_length = min_length_subarray(numbers=numbers, target=target)
-    logger.info(f"Here is the Minimum length for the subarray whose element is greater than threshold:   {min_length}")
-    
-if __name__ == '__main__':
+    logger.info(
+        f"Here is the Minimum length for the subarray whose element is greater than threshold:   {min_length}"
+    )
+
+
+if __name__ == "__main__":
     main()

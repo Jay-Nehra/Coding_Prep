@@ -24,20 +24,22 @@
 from loguru import logger
 from typing import List, Tuple
 
+
 def max_sum_subarray(numbers: List[int], k: int) -> int:
     if len(numbers) < k:
         raise ValueError("The length of the array should be at least `k`.")
-    
+
     max_sum = sum(numbers[:k])
     current_sum = max_sum
 
     logger.info(f"Initial sum of window size `{k}`: {max_sum}")
-    
+
     for j in range(k, len(numbers)):
         current_sum = current_sum - numbers[j - k] + numbers[j]
         max_sum = max(max_sum, current_sum)
-    
+
     return max_sum
+
 
 def user_input() -> Tuple[List[int], int]:
     while True:
@@ -48,12 +50,18 @@ def user_input() -> Tuple[List[int], int]:
             window = int(target)
             return numbers, window
         except ValueError as e:
-            logger.error(f"Could not parse the input. Please enter valid integers. Error: {e}")
-            
+            logger.error(
+                f"Could not parse the input. Please enter valid integers. Error: {e}"
+            )
+
+
 def main():
     numbers, window = user_input()
     max_sum = max_sum_subarray(numbers=numbers, k=window)
-    logger.info(f"Here is the maximum sum from the array for the given window size:   {max_sum}")
-    
-if __name__ == '__main__':
+    logger.info(
+        f"Here is the maximum sum from the array for the given window size:   {max_sum}"
+    )
+
+
+if __name__ == "__main__":
     main()

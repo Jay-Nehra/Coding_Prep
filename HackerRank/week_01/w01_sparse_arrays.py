@@ -15,35 +15,36 @@ import sys
 #  2. STRING_ARRAY queries
 #
 
+
 def matchingStrings(strings, queries):
     query_freq = [0] * len(queries)
-    
+
     for i, q in enumerate(queries):
         for s in strings:
             if q == s:
                 query_freq[i] += 1
-    
+
     return query_freq
 
 
 def matchingStrings_2(strings, queries):
     string_freq = {}
-    
+
     for s in strings:
-        if s in string_freq: 
+        if s in string_freq:
             string_freq[s] += 1
         else:
             string_freq[s] = 1
-            
+
     query_freq = []
     for q in queries:
         query_freq.append(string_freq.get(q, 0))
-    
+
     return query_freq
 
 
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+if __name__ == "__main__":
+    fptr = open(os.environ["OUTPUT_PATH"], "w")
 
     strings_count = int(input().strip())
 
@@ -63,7 +64,7 @@ if __name__ == '__main__':
 
     res = matchingStrings_2(strings, queries)
 
-    fptr.write('\n'.join(map(str, res)))
-    fptr.write('\n')
+    fptr.write("\n".join(map(str, res)))
+    fptr.write("\n")
 
     fptr.close()

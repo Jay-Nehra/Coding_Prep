@@ -20,17 +20,22 @@
 from typing import List
 from loguru import logger
 
+
 def merge(left: List[int], right: List[int]) -> List[int]:
     logger.info(f"Merging left: {left} and right: {right}")
     result = []
     i, j = 0, 0
     while i < len(left) and j < len(right):
         if left[i] < right[j]:
-            logger.debug(f"left[{i}] ({left[i]}) < right[{j}] ({right[j]}) - adding left[{i}]")
+            logger.debug(
+                f"left[{i}] ({left[i]}) < right[{j}] ({right[j]}) - adding left[{i}]"
+            )
             result.append(left[i])
             i += 1
         else:
-            logger.debug(f"left[{i}] ({left[i]}) >= right[{j}] ({right[j]}) - adding right[{j}]")
+            logger.debug(
+                f"left[{i}] ({left[i]}) >= right[{j}] ({right[j]}) - adding right[{j}]"
+            )
             result.append(right[j])
             j += 1
     logger.debug(f"Extending remaining left: {left[i:]}")
@@ -39,6 +44,7 @@ def merge(left: List[int], right: List[int]) -> List[int]:
     result.extend(right[j:])
     logger.info(f"Merged result: {result}")
     return result
+
 
 def split(numbers: List[int]) -> List[int]:
     logger.info(f"Splitting array: {numbers}")
@@ -56,15 +62,19 @@ def split(numbers: List[int]) -> List[int]:
         logger.info(f"Merged array: {merged_result}")
         return merged_result
 
+
 def mergeSort(numbers: List[int]) -> List[int]:
     logger.info(f"Starting mergeSort on array: {numbers}")
     sorted_array = split(numbers)
     logger.info(f"Sorted array: {sorted_array}")
     return sorted_array
 
+
 def user_input() -> List[int]:
     while True:
-        ui = input("Please enter the space-separated integer array that you want to sort: \n")
+        ui = input(
+            "Please enter the space-separated integer array that you want to sort: \n"
+        )
         try:
             ui = list(map(int, ui.split()))
             logger.info(f"Here is the array that we need to sort: {ui}")
@@ -72,11 +82,13 @@ def user_input() -> List[int]:
         except Exception as e:
             logger.debug(f"Invalid Input. Failed to convert to the integer array. {e}")
 
+
 def main():
     logger.info("Starting the Application.")
     ui = user_input()
     merged_sort_result = mergeSort(ui)
     logger.info(f"Here is the sorted output: {merged_sort_result}")
+
 
 if __name__ == "__main__":
     main()

@@ -7,43 +7,47 @@
                     - The pivot is now in the final position. 
                 - Now, recursively apply the same process to the sub-arrays that are formed by the splitting the array ar the pivot. 
     """
-    
-
 
 from typing import List
 from loguru import logger
+
 
 def quicksort(numbers: List[int]) -> List[int]:
     if len(numbers) <= 1:
         return numbers
     else:
         # First step: pivot selection
-        # let's start with the last element as the pivot 
+        # let's start with the last element as the pivot
         pivot = numbers[-1]
-        #divide the array into left and right subarray
-        left = [x for x in numbers if x<pivot]
-        right = [x for x in numbers if x>pivot]
-        middle = [x for x in numbers if x==pivot]
+        # divide the array into left and right subarray
+        left = [x for x in numbers if x < pivot]
+        right = [x for x in numbers if x > pivot]
+        middle = [x for x in numbers if x == pivot]
         logger.info(f"Current state of the Left sub-array: {left}")
         logger.info(f"Current state of the right sub-array:  {right}")
-        logger.info(f"Current state of the middle sub-array:  {middle}" )
-        return quicksort(left)+middle+quicksort(right)
-    
+        logger.info(f"Current state of the middle sub-array:  {middle}")
+        return quicksort(left) + middle + quicksort(right)
+
+
 def user_input() -> List[int]:
-    while True: 
+    while True:
         user_input = input("Please enter the space separated integer arrau. \n")
         try:
             arr = list(map(int, user_input.split()))
             logger.info(f"Given array that we need to arrange :     {arr} \n")
             return arr
         except Exception as e:
-            logger.error(f"Invalid input. Failed to convert to integer array. Error: {e}")
-            
+            logger.error(
+                f"Invalid input. Failed to convert to integer array. Error: {e}"
+            )
+
+
 def main():
     logger.info("Starting the application.")
     arr = user_input()
     output = quicksort(arr)
     logger.info(f"Resulting list of numbers in the with sorted output : \n {output}")
 
-if __name__  == '__main__':
+
+if __name__ == "__main__":
     main()
