@@ -13,28 +13,36 @@ from loguru import logger
 
 
 def palindromicity_test(sentence: str) -> bool:
-    left, right = 0, len(sentence) - 1 
-    
+    left, right = 0, len(sentence) - 1
+
     logger.debug(f"Initial string: '{sentence}'")
-    
+
     while left < right:
         while left < right and not sentence[left].isalnum():
-            logger.debug(f"Skipping non-alphanumeric at left index {left}: '{sentence[left]}'")
+            logger.debug(
+                f"Skipping non-alphanumeric at left index {left}: '{sentence[left]}'"
+            )
             left += 1
-        
+
         while left < right and not sentence[right].isalnum():
-            logger.debug(f"Skipping non-alphanumeric at right index {right}: '{sentence[right]}'")
+            logger.debug(
+                f"Skipping non-alphanumeric at right index {right}: '{sentence[right]}'"
+            )
             right -= 1
-        
-        logger.debug(f"Comparing left '{sentence[left]}' at index {left} with right '{sentence[right]}' at index {right}")
-        
+
+        logger.debug(
+            f"Comparing left '{sentence[left]}' at index {left} with right '{sentence[right]}' at index {right}"
+        )
+
         if sentence[left].lower() != sentence[right].lower():
-            logger.debug(f"Mismatch found: left '{sentence[left]}' != right '{sentence[right]}'")
+            logger.debug(
+                f"Mismatch found: left '{sentence[left]}' != right '{sentence[right]}'"
+            )
             return False
-        
+
         left += 1
         right -= 1
-        
+
     logger.debug("The string is a palindrome.")
     return True
 
