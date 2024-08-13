@@ -220,3 +220,9 @@ ll.traverse_ll()
 
 ll.reverse_ll_recursive()
 ll.traverse_ll()
+
+
+ll.remove_at_index(1)
+ll.insert_at_index(5,1)
+ll.traverse_ll()
+
