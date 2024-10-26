@@ -15,23 +15,24 @@ import sys
 #  2. STRING path
 #
 
+
 def countingValleys(steps, path):
     level = 0
     valley = 0
-    
+
     for p in path:
-        if p == 'U':
+        if p == "U":
             level += 1
             if level == 0:
                 valley += 1
-        elif p == 'D':
+        elif p == "D":
             level -= 1
-        
-    return valley
-        
 
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    return valley
+
+
+if __name__ == "__main__":
+    fptr = open(os.environ["OUTPUT_PATH"], "w")
 
     steps = int(input().strip())
 
@@ -39,6 +40,6 @@ if __name__ == '__main__':
 
     result = countingValleys(steps, path)
 
-    fptr.write(str(result) + '\n')
+    fptr.write(str(result) + "\n")
 
     fptr.close()

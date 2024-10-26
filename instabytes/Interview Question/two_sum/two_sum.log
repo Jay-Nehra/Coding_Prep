@@ -1,0 +1,90 @@
+2024-10-26 10:33:56.930 | INFO     | __main__:main:70 - Starting the program
+2024-10-26 10:34:11.910 | INFO     | __main__:main:74 - Input numbers: [1, 2, 4, 5, 6, 3, 2, 7]
+2024-10-26 10:34:15.344 | INFO     | __main__:main:77 - Target number: 13
+2024-10-26 10:34:15.345 | INFO     | __main__:main:79 - Running O(n²) solution
+2024-10-26 10:34:15.345 | INFO     | __main__:two_sum_On2:38 - Starting two_sum_On2 with nums=[1, 2, 4, 5, 6, 3, 2, 7] and target=13
+2024-10-26 10:34:15.346 | DEBUG    | __main__:two_sum_On2:41 - Checking pair: 1 + 2
+2024-10-26 10:34:15.347 | DEBUG    | __main__:two_sum_On2:41 - Checking pair: 1 + 4
+2024-10-26 10:34:15.347 | DEBUG    | __main__:two_sum_On2:41 - Checking pair: 1 + 5
+2024-10-26 10:34:15.348 | DEBUG    | __main__:two_sum_On2:41 - Checking pair: 1 + 6
+2024-10-26 10:34:15.349 | DEBUG    | __main__:two_sum_On2:41 - Checking pair: 1 + 3
+2024-10-26 10:34:15.349 | DEBUG    | __main__:two_sum_On2:41 - Checking pair: 1 + 2
+2024-10-26 10:34:15.350 | DEBUG    | __main__:two_sum_On2:41 - Checking pair: 1 + 7
+2024-10-26 10:34:15.350 | DEBUG    | __main__:two_sum_On2:41 - Checking pair: 2 + 4
+2024-10-26 10:34:15.351 | DEBUG    | __main__:two_sum_On2:41 - Checking pair: 2 + 5
+2024-10-26 10:34:15.351 | DEBUG    | __main__:two_sum_On2:41 - Checking pair: 2 + 6
+2024-10-26 10:34:15.352 | DEBUG    | __main__:two_sum_On2:41 - Checking pair: 2 + 3
+2024-10-26 10:34:15.352 | DEBUG    | __main__:two_sum_On2:41 - Checking pair: 2 + 2
+2024-10-26 10:34:15.353 | DEBUG    | __main__:two_sum_On2:41 - Checking pair: 2 + 7
+2024-10-26 10:34:15.353 | DEBUG    | __main__:two_sum_On2:41 - Checking pair: 4 + 5
+2024-10-26 10:34:15.354 | DEBUG    | __main__:two_sum_On2:41 - Checking pair: 4 + 6
+2024-10-26 10:34:15.355 | DEBUG    | __main__:two_sum_On2:41 - Checking pair: 4 + 3
+2024-10-26 10:34:15.355 | DEBUG    | __main__:two_sum_On2:41 - Checking pair: 4 + 2
+2024-10-26 10:34:15.356 | DEBUG    | __main__:two_sum_On2:41 - Checking pair: 4 + 7
+2024-10-26 10:34:15.356 | DEBUG    | __main__:two_sum_On2:41 - Checking pair: 5 + 6
+2024-10-26 10:34:15.357 | DEBUG    | __main__:two_sum_On2:41 - Checking pair: 5 + 3
+2024-10-26 10:34:15.358 | DEBUG    | __main__:two_sum_On2:41 - Checking pair: 5 + 2
+2024-10-26 10:34:15.358 | DEBUG    | __main__:two_sum_On2:41 - Checking pair: 5 + 7
+2024-10-26 10:34:15.359 | DEBUG    | __main__:two_sum_On2:41 - Checking pair: 6 + 3
+2024-10-26 10:34:15.360 | DEBUG    | __main__:two_sum_On2:41 - Checking pair: 6 + 2
+2024-10-26 10:34:15.360 | DEBUG    | __main__:two_sum_On2:41 - Checking pair: 6 + 7
+2024-10-26 10:34:15.361 | SUCCESS  | __main__:two_sum_On2:43 - Found solution: indices [4, 7]
+2024-10-26 10:34:15.361 | INFO     | __main__:main:82 - Running O(n) solution
+2024-10-26 10:34:15.362 | INFO     | __main__:two_sum_On:53 - Starting two_sum_On with nums=[1, 2, 4, 5, 6, 3, 2, 7] and target=13
+2024-10-26 10:34:15.362 | DEBUG    | __main__:two_sum_On:59 - Current value: 1, Complement needed: 12
+2024-10-26 10:34:15.363 | DEBUG    | __main__:two_sum_On:59 - Current value: 2, Complement needed: 11
+2024-10-26 10:34:15.364 | DEBUG    | __main__:two_sum_On:59 - Current value: 4, Complement needed: 9
+2024-10-26 10:34:15.365 | DEBUG    | __main__:two_sum_On:59 - Current value: 5, Complement needed: 8
+2024-10-26 10:34:15.366 | DEBUG    | __main__:two_sum_On:59 - Current value: 6, Complement needed: 7
+2024-10-26 10:34:15.366 | DEBUG    | __main__:two_sum_On:59 - Current value: 3, Complement needed: 10
+2024-10-26 10:34:15.367 | DEBUG    | __main__:two_sum_On:59 - Current value: 2, Complement needed: 11
+2024-10-26 10:34:15.369 | DEBUG    | __main__:two_sum_On:59 - Current value: 7, Complement needed: 6
+2024-10-26 10:34:15.370 | SUCCESS  | __main__:two_sum_On:62 - Found solution: indices [4, 7]
+2024-10-26 10:37:28.960 | INFO     | __main__:main:88 - Starting the program
+2024-10-26 10:37:47.649 | INFO     | __main__:main:92 - Input numbers: [1, 2, 4, 5, 6, 3, 2, 7]
+2024-10-26 10:37:51.907 | INFO     | __main__:main:95 - Target number: 13
+2024-10-26 10:37:51.908 | INFO     | __main__:main:97 - Running O(n²) solution
+2024-10-26 10:37:51.909 | INFO     | __main__:two_sum_On2:55 - Starting two_sum_On2 with nums=[1, 2, 4, 5, 6, 3, 2, 7] and target=13
+2024-10-26 10:37:51.910 | DEBUG    | __main__:two_sum_On2:58 - Checking pair: 1 + 2
+2024-10-26 10:37:51.911 | DEBUG    | __main__:two_sum_On2:58 - Checking pair: 1 + 4
+2024-10-26 10:37:51.912 | DEBUG    | __main__:two_sum_On2:58 - Checking pair: 1 + 5
+2024-10-26 10:37:51.912 | DEBUG    | __main__:two_sum_On2:58 - Checking pair: 1 + 6
+2024-10-26 10:37:51.913 | DEBUG    | __main__:two_sum_On2:58 - Checking pair: 1 + 3
+2024-10-26 10:37:51.913 | DEBUG    | __main__:two_sum_On2:58 - Checking pair: 1 + 2
+2024-10-26 10:37:51.914 | DEBUG    | __main__:two_sum_On2:58 - Checking pair: 1 + 7
+2024-10-26 10:37:51.915 | DEBUG    | __main__:two_sum_On2:58 - Checking pair: 2 + 4
+2024-10-26 10:37:51.916 | DEBUG    | __main__:two_sum_On2:58 - Checking pair: 2 + 5
+2024-10-26 10:37:51.917 | DEBUG    | __main__:two_sum_On2:58 - Checking pair: 2 + 6
+2024-10-26 10:37:51.918 | DEBUG    | __main__:two_sum_On2:58 - Checking pair: 2 + 3
+2024-10-26 10:37:51.919 | DEBUG    | __main__:two_sum_On2:58 - Checking pair: 2 + 2
+2024-10-26 10:37:51.920 | DEBUG    | __main__:two_sum_On2:58 - Checking pair: 2 + 7
+2024-10-26 10:37:51.920 | DEBUG    | __main__:two_sum_On2:58 - Checking pair: 4 + 5
+2024-10-26 10:37:51.921 | DEBUG    | __main__:two_sum_On2:58 - Checking pair: 4 + 6
+2024-10-26 10:37:51.922 | DEBUG    | __main__:two_sum_On2:58 - Checking pair: 4 + 3
+2024-10-26 10:37:51.923 | DEBUG    | __main__:two_sum_On2:58 - Checking pair: 4 + 2
+2024-10-26 10:37:51.923 | DEBUG    | __main__:two_sum_On2:58 - Checking pair: 4 + 7
+2024-10-26 10:37:51.924 | DEBUG    | __main__:two_sum_On2:58 - Checking pair: 5 + 6
+2024-10-26 10:37:51.924 | DEBUG    | __main__:two_sum_On2:58 - Checking pair: 5 + 3
+2024-10-26 10:37:51.925 | DEBUG    | __main__:two_sum_On2:58 - Checking pair: 5 + 2
+2024-10-26 10:37:51.926 | DEBUG    | __main__:two_sum_On2:58 - Checking pair: 5 + 7
+2024-10-26 10:37:51.926 | DEBUG    | __main__:two_sum_On2:58 - Checking pair: 6 + 3
+2024-10-26 10:37:51.927 | DEBUG    | __main__:two_sum_On2:58 - Checking pair: 6 + 2
+2024-10-26 10:37:51.927 | DEBUG    | __main__:two_sum_On2:58 - Checking pair: 6 + 7
+2024-10-26 10:37:51.928 | SUCCESS  | __main__:two_sum_On2:60 - Found solution: indices [4, 7]
+2024-10-26 10:37:51.928 | INFO     | __main__:wrapper:41 - Function 'two_sum_On2' execution time: 0.019229 seconds
+2024-10-26 10:37:51.929 | DEBUG    | __main__:wrapper:42 - Arguments passed: args=([1, 2, 4, 5, 6, 3, 2, 7], 13), kwargs={}
+2024-10-26 10:37:51.929 | DEBUG    | __main__:wrapper:43 - Result returned: [4, 7]
+2024-10-26 10:37:51.930 | INFO     | __main__:main:100 - Running O(n) solution
+2024-10-26 10:37:51.931 | INFO     | __main__:two_sum_On:71 - Starting two_sum_On with nums=[1, 2, 4, 5, 6, 3, 2, 7] and target=13
+2024-10-26 10:37:51.931 | DEBUG    | __main__:two_sum_On:77 - Current value: 1, Complement needed: 12
+2024-10-26 10:37:51.932 | DEBUG    | __main__:two_sum_On:77 - Current value: 2, Complement needed: 11
+2024-10-26 10:37:51.932 | DEBUG    | __main__:two_sum_On:77 - Current value: 4, Complement needed: 9
+2024-10-26 10:37:51.933 | DEBUG    | __main__:two_sum_On:77 - Current value: 5, Complement needed: 8
+2024-10-26 10:37:51.933 | DEBUG    | __main__:two_sum_On:77 - Current value: 6, Complement needed: 7
+2024-10-26 10:37:51.934 | DEBUG    | __main__:two_sum_On:77 - Current value: 3, Complement needed: 10
+2024-10-26 10:37:51.934 | DEBUG    | __main__:two_sum_On:77 - Current value: 2, Complement needed: 11
+2024-10-26 10:37:51.935 | DEBUG    | __main__:two_sum_On:77 - Current value: 7, Complement needed: 6
+2024-10-26 10:37:51.936 | SUCCESS  | __main__:two_sum_On:80 - Found solution: indices [4, 7]
+2024-10-26 10:37:51.936 | INFO     | __main__:wrapper:41 - Function 'two_sum_On' execution time: 0.005693 seconds
+2024-10-26 10:37:51.937 | DEBUG    | __main__:wrapper:42 - Arguments passed: args=([1, 2, 4, 5, 6, 3, 2, 7], 13), kwargs={}
+2024-10-26 10:37:51.937 | DEBUG    | __main__:wrapper:43 - Result returned: [4, 7]

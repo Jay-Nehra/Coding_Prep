@@ -18,6 +18,7 @@
 from typing import List
 from loguru import logger
 
+
 class MnemonicsMapping:
     def __init__(self) -> None:
         self.mapping = {
@@ -55,37 +56,44 @@ def mnemonics_iterative(numbers: List[int]) -> List[str]:
 
     return result
 
-def mnemonics_recursive(numbers: List[int], index: int = 0, current_combination: str = "") -> List[str]:
+
+def mnemonics_recursive(
+    numbers: List[int], index: int = 0, current_combination: str = ""
+) -> List[str]:
     if index == len(numbers):
         return [current_combination]
-    
+
     mapping = MnemonicsMapping()
     current_digit = str(numbers[index])
     letters = mapping.get_letter(current_digit)
-    
+
     result = []
     for letter in letters:
-        result.extend(mnemonics_recursive(numbers, index + 1, current_combination + letter))
-    
+        result.extend(
+            mnemonics_recursive(numbers, index + 1, current_combination + letter)
+        )
+
     return result
+
 
 def mnemonics_recursive_with_helper(numbers: List[int]) -> List[str]:
     mapping = MnemonicsMapping()
     result = []
-    
+
     def _mnemonics_helper(index: int, current_combination: str):
         if index == len(numbers):
             result.append(current_combination)
             return
-        
+
         current_digit = str(numbers[index])
         letters = mapping.get_letter(current_digit)
-        
+
         for letter in letters:
             _mnemonics_helper(index + 1, current_combination + letter)
-    
+
     _mnemonics_helper(0, "")
     return result
+
 
 def user_input() -> List[int]:
     while True:
@@ -96,6 +104,7 @@ def user_input() -> List[int]:
             return [int(digit) for digit in user_numbers]
         except ValueError as e:
             logger.error(f"Invalid input: {e}. Please try again.")
+
 
 def main():
     numbers = user_input()
@@ -109,6 +118,7 @@ def main():
 
     mnemonics_recur_helper = mnemonics_recursive_with_helper(numbers)
     logger.info(f"Mnemonics (Recursive with Helper): {mnemonics_recur_helper}")
+
 
 if __name__ == "__main__":
     main()
