@@ -29,7 +29,6 @@ Constraints:
 from functools import wraps
 from time import perf_counter
 from typing import List
-
 from loguru import logger
 
 
@@ -91,7 +90,7 @@ def two_sum_On(nums: List[int], target: int) -> List[int]:
     logger.warning("No solution found")
 
 
-def main():
+def main() -> None:
     logger.add("two_sum.log", rotation="10 KB")
     logger.info("Starting the program")
 
