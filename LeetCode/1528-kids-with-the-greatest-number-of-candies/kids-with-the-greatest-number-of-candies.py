@@ -19,9 +19,8 @@ class Solution:
         current_greatest = max(candies)
         bool_arr = []
         for i in range(len(candies)):
-            bool_arr.append(True if (candies[i] + extraCandies) >= current_greatest else False)
+            bool_arr.append(
+                True if (candies[i] + extraCandies) >= current_greatest else False
+            )
 
         return bool_arr
-
-
-        
