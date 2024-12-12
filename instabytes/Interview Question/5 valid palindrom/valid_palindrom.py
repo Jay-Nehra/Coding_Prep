@@ -29,12 +29,15 @@ Constraints:
 s consists only of printable ASCII characters.
 
 """
+
 import re
 from loguru import logger
 
+
 def valid_palindrome(phrase: str) -> bool:
-    phrase = re.sub(r'[^a-zA-Z0-9]', '', phrase.lower())
+    phrase = re.sub(r"[^a-zA-Z0-9]", "", phrase.lower())
     return phrase == phrase[::-1]
+
 
 def main() -> None:
 
@@ -44,6 +47,7 @@ def main() -> None:
     result = valid_palindrome(phrase)
     logger.info(f"Is palindrome: {result}")
     print(f"Is the phrase '{phrase}' a palindrome? \n{result}")
+
 
 if __name__ == "__main__":
     main()

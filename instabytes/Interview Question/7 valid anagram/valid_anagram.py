@@ -25,13 +25,15 @@ from loguru import logger
 def valid_anagram_counter(s: str, t: str) -> bool:
     return Counter(s) == Counter(t)
 
+
 def valid_anagram_sort(s: str, t: str) -> bool:
     return sorted(s) == sorted(t)
+
 
 def valid_anagram_dict(s: str, t: str) -> bool:
     if len(s) != len(t):
         return False
-    
+
     char_count = defaultdict(int)
 
     for char in s:
@@ -44,6 +46,7 @@ def valid_anagram_dict(s: str, t: str) -> bool:
 
     return True if all(count == 0 for count in char_count.values()) else False
 
+
 def main() -> None:
     s = input("Enter the first string: ")
     t = input("Enter the second string: ")
@@ -51,5 +54,6 @@ def main() -> None:
     result = valid_anagram_counter(s, t)
     logger.info(f"Is anagram: {result}")
 
+
 if __name__ == "__main__":
-    main()  
+    main()

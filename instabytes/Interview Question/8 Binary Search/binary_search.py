@@ -21,8 +21,9 @@ Constraints:
     nums is sorted in ascending order.
 """
 
-from loguru import logger 
+from loguru import logger
 from typing import List
+
 
 def search(nums: List[int], target: int):
     """
@@ -39,13 +40,16 @@ def search(nums: List[int], target: int):
             right = mid - 1
     return -1
 
+
 def validate_non_decreasing_list(numbers):
     """
     Validate if the given list is a list of numbers and is non-decreasing.
     """
-    if not isinstance(numbers, list) or not all(isinstance(x, (int, float)) for x in numbers):
+    if not isinstance(numbers, list) or not all(
+        isinstance(x, (int, float)) for x in numbers
+    ):
         return False
-    return all(numbers[i] <= numbers[i+1] for i in range(len(numbers)-1))
+    return all(numbers[i] <= numbers[i + 1] for i in range(len(numbers) - 1))
 
 
 # def main() -> None:
@@ -80,13 +84,24 @@ def validate_non_decreasing_list(numbers):
 
 import click
 
+
 @click.command()
-@click.option("--numbers", prompt="Please enter the list of numbers", help="Numbers should be space separated.")
-@click.option("--target", prompt="Please enter the target number", help="The number to search for.")
+@click.option(
+    "--numbers",
+    prompt="Please enter the list of numbers",
+    help="Numbers should be space separated.",
+)
+@click.option(
+    "--target",
+    prompt="Please enter the target number",
+    help="The number to search for.",
+)
 def main(numbers, target):
     numbers = [int(x) for x in numbers.split()]
     if not validate_non_decreasing_list(numbers):
-        click.echo("Invalid input. Please enter a list of numbers in non-decreasing order.")
+        click.echo(
+            "Invalid input. Please enter a list of numbers in non-decreasing order."
+        )
         return
 
     result = search(numbers, int(target))
